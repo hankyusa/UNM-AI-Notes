@@ -50,9 +50,11 @@ Complexity like DFS. Time is $O(b^m)$. Space is $O(bm)$. $b$ and $m$ are too lar
 
 #### Alpha-Beta Pruning
 
-- Initialize $\alpha = -\infty$ and $\beta = +\infty$.
-- When expanding a max node, we adjust $\alpha$ up to the values of the min children. If we come across a child with value $\geq \beta$, then we set this max node to that value. Otherwise, set this max node to the highest value of its min children.
-- When expanding a min node, we adjust $\beta$ down to the values of the max children. If we come across a child with value $\leq \alpha$, then we set this min node to that value. Otherwise, set this min node to the lowest value of its max children.
+- $\alpha=$ best already explored option along path to the root for maximizer
+- $\beta=$ best already explored option along path to the root for minimizer
+- Every time a node is expanded it will get its initial $\alpha$ and $\beta$ from it's parent. The root starts with $\alpha = -\infty$ and $\beta = +\infty$.
+- When expanding a max node, we adjust its $\alpha$ up to the values of the children. If we come across a child with value $\geq \beta$, then we set this max node to that value. Otherwise, set this max node to the highest value of its children.
+- When expanding a min node, we adjust its $\beta$ down to the values of the children. If we come across a child with value $\leq \alpha$, then we set this min node to that value. Otherwise, set this min node to the lowest value of its children.
 
 ### Expectimax Search
 
@@ -256,7 +258,7 @@ Belief after considering evidence: $B(X_{t+1}) = P(X_{t+1} \mid e_{1:t+1}) \prop
 
 Consider these triples.
 
-```<!-- mermaid -->
+```mermaid
 graph LR
 X-->Y
 Y-->Z
@@ -264,10 +266,11 @@ Y-->Z
 
 Causal Chain
 
+- $\boxed X\rightarrow \boxed Y \rightarrow \boxed Z$
 - $X\not\perp Z$
 - $X\perp Z\mid Y$
 
-```<!-- mermaid -->
+```mermaid
 graph TB
 Y-->X
 Y-->Z
@@ -275,10 +278,11 @@ Y-->Z
 
 Common Cause
 
+- $\boxed X\leftarrow \boxed Y \rightarrow \boxed Z$
 - $X\not\perp Z$
 - $X\perp Z\mid Y$
 
-```<!-- mermaid -->
+```mermaid
 graph TB
 X-->Y
 Z-->Y
@@ -288,9 +292,10 @@ linkStyle 2 stroke-width:2px,stroke-dasharray: 2, 5;
 
 Common Effect
 
+- $\boxed X\rightarrow \boxed Y \leftarrow \boxed Z$
 - $X\perp Z$
 - $X\not\perp Z\mid Y$
-- $X\not\perp Z\mid Y'$
+- $X\not\perp Z\mid Y'$ where $Y'$ is any descendent of $Y$
 
 In the above triples if $Y$ and $Y'$ are given or not given such that $X$ and $Z$ become independent, then the triple is considered inactive. Triples that are not inactive are active. An undirected path that contains any inactive triple is inactive (active otherwise).
 
@@ -309,7 +314,7 @@ If the set of conditional independences of Bayes' net A is a subset of the set o
 
 #### Enumeration
 
-```<!-- mermaid -->
+```mermaid
 graph TB
 B-->A
 E-->A
