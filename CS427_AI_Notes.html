@@ -3564,19 +3564,19 @@
                         <mrow>
                           <mi>O</mi>
                           <mo>(</mo>
-                          <mi mathvariant="normal">∥</mi>
+                          <mi mathvariant="normal">∣</mi>
                           <mi>S</mi>
                           <msup>
-                            <mi mathvariant="normal">∥</mi>
+                            <mi mathvariant="normal">∣</mi>
                             <mn>2</mn>
                           </msup>
                           <mo>⋅</mo>
-                          <mi mathvariant="normal">∥</mi>
+                          <mi mathvariant="normal">∣</mi>
                           <mi>A</mi>
-                          <mi mathvariant="normal">∥</mi>
+                          <mi mathvariant="normal">∣</mi>
                           <mo>)</mo>
                         </mrow>
-                        <annotation encoding="application/x-tex">O(\|S\|^2\cdot \|A\|)</annotation>
+                        <annotation encoding="application/x-tex">O(|S|^2\cdot |A|)</annotation>
                       </semantics>
                     </math>
                   </span>
@@ -3586,10 +3586,10 @@
                     <span class="base">
                       <span class="mord mathit" style="margin-right: 0.02778em;">O</span>
                       <span class="mopen">(</span>
-                      <span class="mord mathrm">∥</span>
+                      <span class="mord mathrm">∣</span>
                       <span class="mord mathit" style="margin-right: 0.05764em;">S</span>
                       <span class="mord">
-                        <span class="mord mathrm">∥</span>
+                        <span class="mord mathrm">∣</span>
                         <span class="msupsub">
                           <span class="vlist-t">
                             <span class="vlist-r">
@@ -3606,9 +3606,9 @@
                         </span>
                       </span>
                       <span class="mbin">⋅</span>
-                      <span class="mord mathrm">∥</span>
+                      <span class="mord mathrm">∣</span>
                       <span class="mord mathit">A</span>
-                      <span class="mord mathrm">∥</span>
+                      <span class="mord mathrm">∣</span>
                       <span class="mclose">)</span>
                     </span>
                   </span>
@@ -4126,15 +4126,15 @@
                             <mrow>
                               <mi>O</mi>
                               <mo>(</mo>
-                              <mi mathvariant="normal">∥</mi>
+                              <mi mathvariant="normal">∣</mi>
                               <mi>S</mi>
                               <msup>
-                                <mi mathvariant="normal">∥</mi>
+                                <mi mathvariant="normal">∣</mi>
                                 <mn>2</mn>
                               </msup>
                               <mo>)</mo>
                             </mrow>
-                            <annotation encoding="application/x-tex">O(\|S\|^2)</annotation>
+                            <annotation encoding="application/x-tex">O(|S|^2)</annotation>
                           </semantics>
                         </math>
                       </span>
@@ -4144,10 +4144,10 @@
                         <span class="base">
                           <span class="mord mathit" style="margin-right: 0.02778em;">O</span>
                           <span class="mopen">(</span>
-                          <span class="mord mathrm">∥</span>
+                          <span class="mord mathrm">∣</span>
                           <span class="mord mathit" style="margin-right: 0.05764em;">S</span>
                           <span class="mord">
-                            <span class="mord mathrm">∥</span>
+                            <span class="mord mathrm">∣</span>
                             <span class="msupsub">
                               <span class="vlist-t">
                                 <span class="vlist-r">
@@ -8698,7 +8698,7 @@
                       <mi>P</mi>
                       <mo>(</mo>
                       <mi>A</mi>
-                      <mo>∨</mo>
+                      <mo>∩</mo>
                       <mi>B</mi>
                       <mo>)</mo>
                       <mo>=</mo>
@@ -8706,13 +8706,25 @@
                       <mo>(</mo>
                       <mi>A</mi>
                       <mo>)</mo>
-                      <mo>+</mo>
+                      <mi>P</mi>
+                      <mo>(</mo>
+                      <mi>B</mi>
+                      <mo>∣</mo>
+                      <mi>A</mi>
+                      <mo>)</mo>
+                      <mo>=</mo>
                       <mi>P</mi>
                       <mo>(</mo>
                       <mi>B</mi>
                       <mo>)</mo>
+                      <mi>P</mi>
+                      <mo>(</mo>
+                      <mi>A</mi>
+                      <mo>∣</mo>
+                      <mi>B</mi>
+                      <mo>)</mo>
                     </mrow>
-                    <annotation encoding="application/x-tex">P(A \vee B) = P(A)+P(B)</annotation>
+                    <annotation encoding="application/x-tex">P(A \cap B) = P(A)P(B\mid A) = P(B)P(A\mid B)</annotation>
                   </semantics>
                 </math>
               </span>
@@ -8723,7 +8735,7 @@
                   <span class="mord mathit" style="margin-right: 0.13889em;">P</span>
                   <span class="mopen">(</span>
                   <span class="mord mathit">A</span>
-                  <span class="mbin">∨</span>
+                  <span class="mbin">∩</span>
                   <span class="mord mathit" style="margin-right: 0.05017em;">B</span>
                   <span class="mclose">)</span>
                   <span class="mrel">=</span>
@@ -8731,11 +8743,102 @@
                   <span class="mopen">(</span>
                   <span class="mord mathit">A</span>
                   <span class="mclose">)</span>
-                  <span class="mbin">+</span>
+                  <span class="mord mathit" style="margin-right: 0.13889em;">P</span>
+                  <span class="mopen">(</span>
+                  <span class="mord mathit" style="margin-right: 0.05017em;">B</span>
+                  <span class="mrel">∣</span>
+                  <span class="mord mathit">A</span>
+                  <span class="mclose">)</span>
+                  <span class="mrel">=</span>
                   <span class="mord mathit" style="margin-right: 0.13889em;">P</span>
                   <span class="mopen">(</span>
                   <span class="mord mathit" style="margin-right: 0.05017em;">B</span>
                   <span class="mclose">)</span>
+                  <span class="mord mathit" style="margin-right: 0.13889em;">P</span>
+                  <span class="mopen">(</span>
+                  <span class="mord mathit">A</span>
+                  <span class="mrel">∣</span>
+                  <span class="mord mathit" style="margin-right: 0.05017em;">B</span>
+                  <span class="mclose">)</span>
+                </span>
+              </span>
+            </span>
+          </span>
+        </li>
+        <li>If
+          <span class="katex--inline">
+            <span class="katex">
+              <span class="katex-mathml">
+                <math>
+                  <semantics>
+                    <mrow>
+                      <mi>A</mi>
+                    </mrow>
+                    <annotation encoding="application/x-tex">A</annotation>
+                  </semantics>
+                </math>
+              </span>
+              <span class="katex-html" aria-hidden="true">
+                <span class="strut" style="height: 0.68333em;"></span>
+                <span class="strut bottom" style="height: 0.68333em; vertical-align: 0em;"></span>
+                <span class="base">
+                  <span class="mord mathit">A</span>
+                </span>
+              </span>
+            </span>
+          </span> and
+          <span class="katex--inline">
+            <span class="katex">
+              <span class="katex-mathml">
+                <math>
+                  <semantics>
+                    <mrow>
+                      <mi>B</mi>
+                    </mrow>
+                    <annotation encoding="application/x-tex">B</annotation>
+                  </semantics>
+                </math>
+              </span>
+              <span class="katex-html" aria-hidden="true">
+                <span class="strut" style="height: 0.68333em;"></span>
+                <span class="strut bottom" style="height: 0.68333em; vertical-align: 0em;"></span>
+                <span class="base">
+                  <span class="mord mathit" style="margin-right: 0.05017em;">B</span>
+                </span>
+              </span>
+            </span>
+          </span> are disjoint, then
+          <span class="katex--inline">
+            <span class="katex">
+              <span class="katex-mathml">
+                <math>
+                  <semantics>
+                    <mrow>
+                      <mi>P</mi>
+                      <mo>(</mo>
+                      <mi>A</mi>
+                      <mo>∩</mo>
+                      <mi>B</mi>
+                      <mo>)</mo>
+                      <mo>=</mo>
+                      <mn>0</mn>
+                    </mrow>
+                    <annotation encoding="application/x-tex">P(A\cap B)=0</annotation>
+                  </semantics>
+                </math>
+              </span>
+              <span class="katex-html" aria-hidden="true">
+                <span class="strut" style="height: 0.75em;"></span>
+                <span class="strut bottom" style="height: 1em; vertical-align: -0.25em;"></span>
+                <span class="base">
+                  <span class="mord mathit" style="margin-right: 0.13889em;">P</span>
+                  <span class="mopen">(</span>
+                  <span class="mord mathit">A</span>
+                  <span class="mbin">∩</span>
+                  <span class="mord mathit" style="margin-right: 0.05017em;">B</span>
+                  <span class="mclose">)</span>
+                  <span class="mrel">=</span>
+                  <span class="mord mathrm">0</span>
                 </span>
               </span>
             </span>
@@ -8751,7 +8854,7 @@
                       <mi>P</mi>
                       <mo>(</mo>
                       <mi>A</mi>
-                      <mo>∧</mo>
+                      <mo>∪</mo>
                       <mi>B</mi>
                       <mo>)</mo>
                       <mo>=</mo>
@@ -8759,13 +8862,20 @@
                       <mo>(</mo>
                       <mi>A</mi>
                       <mo>)</mo>
-                      <mo>⋅</mo>
+                      <mo>+</mo>
                       <mi>P</mi>
                       <mo>(</mo>
                       <mi>B</mi>
                       <mo>)</mo>
+                      <mo>−</mo>
+                      <mi>P</mi>
+                      <mo>(</mo>
+                      <mi>A</mi>
+                      <mo>∩</mo>
+                      <mi>B</mi>
+                      <mo>)</mo>
                     </mrow>
-                    <annotation encoding="application/x-tex">P(A \wedge B) = P(A)\cdot P(B)</annotation>
+                    <annotation encoding="application/x-tex">P(A \cup B) = P(A)+P(B)-P(A\cap B)</annotation>
                   </semantics>
                 </math>
               </span>
@@ -8776,7 +8886,7 @@
                   <span class="mord mathit" style="margin-right: 0.13889em;">P</span>
                   <span class="mopen">(</span>
                   <span class="mord mathit">A</span>
-                  <span class="mbin">∧</span>
+                  <span class="mbin">∪</span>
                   <span class="mord mathit" style="margin-right: 0.05017em;">B</span>
                   <span class="mclose">)</span>
                   <span class="mrel">=</span>
@@ -8784,9 +8894,16 @@
                   <span class="mopen">(</span>
                   <span class="mord mathit">A</span>
                   <span class="mclose">)</span>
-                  <span class="mbin">⋅</span>
+                  <span class="mbin">+</span>
                   <span class="mord mathit" style="margin-right: 0.13889em;">P</span>
                   <span class="mopen">(</span>
+                  <span class="mord mathit" style="margin-right: 0.05017em;">B</span>
+                  <span class="mclose">)</span>
+                  <span class="mbin">−</span>
+                  <span class="mord mathit" style="margin-right: 0.13889em;">P</span>
+                  <span class="mopen">(</span>
+                  <span class="mord mathit">A</span>
+                  <span class="mbin">∩</span>
                   <span class="mord mathit" style="margin-right: 0.05017em;">B</span>
                   <span class="mclose">)</span>
                 </span>
@@ -9874,7 +9991,6 @@
                           <mo>∣</mo>
                           <mi>A</mi>
                           <mo>)</mo>
-                          <mo>⋅</mo>
                           <mi>P</mi>
                           <mo>(</mo>
                           <mi>A</mi>
@@ -9888,7 +10004,7 @@
                         </mrow>
                       </mfrac>
                     </mrow>
-                    <annotation encoding="application/x-tex">P(A \mid B) = \frac{P(B \mid A) \cdot P(A)}{P(B)}</annotation>
+                    <annotation encoding="application/x-tex">P(A \mid B) = \frac{P(B \mid A)P(A)}{P(B)}</annotation>
                   </semantics>
                 </math>
               </span>
@@ -9938,7 +10054,6 @@
                                   <span class="mrel mtight">∣</span>
                                   <span class="mord mathit mtight">A</span>
                                   <span class="mclose mtight">)</span>
-                                  <span class="mbin mtight">⋅</span>
                                   <span class="mord mathit mtight" style="margin-right: 0.13889em;">P</span>
                                   <span class="mopen mtight">(</span>
                                   <span class="mord mathit mtight">A</span>
@@ -12214,25 +12329,25 @@
       <h3 id="d-separation">D-Separation</h3>
       <p>Consider these triples.</p>
       <div class="mermaid">
-        <svg xmlns="http://www.w3.org/2000/svg" id="mermaid-svg-wEfSC348XTyLrwJm" height="100%" viewBox="0 0 250.015625 106"
+        <svg xmlns="http://www.w3.org/2000/svg" id="mermaid-svg-uAiW3j4m8gtwj7xc" height="100%" viewBox="0 0 250.015625 106"
           style="max-width:250.015625px;">
           <g>
             <g class="output">
               <g class="clusters"></g>
               <g class="edgePaths">
                 <g class="edgePath" style="opacity: 1;">
-                  <path class="path" d="M50.390625,43L75.390625,43L100.390625,43" marker-end="url(#arrowhead173)" style="fill:none"></path>
+                  <path class="path" d="M50.390625,43L75.390625,43L100.390625,43" marker-end="url(#arrowhead281)" style="fill:none"></path>
                   <defs>
-                    <marker id="arrowhead173" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8"
+                    <marker id="arrowhead281" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8"
                       markerHeight="6" orient="auto">
                       <path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path>
                     </marker>
                   </defs>
                 </g>
                 <g class="edgePath" style="opacity: 1;">
-                  <path class="path" d="M130.375,43L155.375,43L180.375,43" marker-end="url(#arrowhead174)" style="fill:none"></path>
+                  <path class="path" d="M130.375,43L155.375,43L180.375,43" marker-end="url(#arrowhead282)" style="fill:none"></path>
                   <defs>
-                    <marker id="arrowhead174" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8"
+                    <marker id="arrowhead282" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8"
                       markerHeight="6" orient="auto">
                       <path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path>
                     </marker>
@@ -12361,27 +12476,27 @@
         </li>
       </ul>
       <div class="mermaid">
-        <svg xmlns="http://www.w3.org/2000/svg" id="mermaid-svg-iqEg6epvgtfC9aUC" height="100%" viewBox="0 0 170.03125 202"
+        <svg xmlns="http://www.w3.org/2000/svg" id="mermaid-svg-XrNZ2zUZSaKKO971" height="100%" viewBox="0 0 170.03125 202"
           style="max-width:170.03125px;">
           <g>
             <g class="output">
               <g class="clusters"></g>
               <g class="edgePaths">
                 <g class="edgePath" style="opacity: 1;">
-                  <path class="path" d="M60.2109375,60.98711189220855L35.1953125,91L35.1953125,116" marker-end="url(#arrowhead182)"
+                  <path class="path" d="M60.2109375,60.98711189220855L35.1953125,91L35.1953125,116" marker-end="url(#arrowhead290)"
                     style="fill:none"></path>
                   <defs>
-                    <marker id="arrowhead182" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8"
+                    <marker id="arrowhead290" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8"
                       markerHeight="6" orient="auto">
                       <path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path>
                     </marker>
                   </defs>
                 </g>
                 <g class="edgePath" style="opacity: 1;">
-                  <path class="path" d="M90.1953125,60.98711189220855L115.2109375,91L115.2109375,116" marker-end="url(#arrowhead183)"
+                  <path class="path" d="M90.1953125,60.98711189220855L115.2109375,91L115.2109375,116" marker-end="url(#arrowhead291)"
                     style="fill:none"></path>
                   <defs>
-                    <marker id="arrowhead183" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8"
+                    <marker id="arrowhead291" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8"
                       markerHeight="6" orient="auto">
                       <path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path>
                     </marker>
@@ -12510,36 +12625,36 @@
         </li>
       </ul>
       <div class="mermaid">
-        <svg xmlns="http://www.w3.org/2000/svg" id="mermaid-svg-nlUCJzbkVrb5Bu3m" height="100%" viewBox="0 0 170.03125 298"
+        <svg xmlns="http://www.w3.org/2000/svg" id="mermaid-svg-ICooXljNNNJkjN6c" height="100%" viewBox="0 0 170.03125 298"
           style="max-width:170.03125px;">
           <g>
             <g class="output">
               <g class="clusters"></g>
               <g class="edgePaths">
                 <g class="edgePath" style="opacity: 1;">
-                  <path class="path" d="M35.1953125,66L35.1953125,91L60.2109375,121.01288810779144" marker-end="url(#arrowhead196)"
+                  <path class="path" d="M35.1953125,66L35.1953125,91L60.2109375,121.01288810779144" marker-end="url(#arrowhead304)"
                     style="fill:none"></path>
                   <defs>
-                    <marker id="arrowhead196" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8"
+                    <marker id="arrowhead304" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8"
                       markerHeight="6" orient="auto">
                       <path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path>
                     </marker>
                   </defs>
                 </g>
                 <g class="edgePath" style="opacity: 1;">
-                  <path class="path" d="M115.2109375,66L115.2109375,91L90.1953125,121.01288810779144" marker-end="url(#arrowhead197)"
+                  <path class="path" d="M115.2109375,66L115.2109375,91L90.1953125,121.01288810779144" marker-end="url(#arrowhead305)"
                     style="fill:none"></path>
                   <defs>
-                    <marker id="arrowhead197" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8"
+                    <marker id="arrowhead305" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8"
                       markerHeight="6" orient="auto">
                       <path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path>
                     </marker>
                   </defs>
                 </g>
                 <g class="edgePath" style="opacity: 1;">
-                  <path class="path" d="M75.203125,162L75.203125,187L75.203125,212" marker-end="url(#arrowhead198)" style="stroke-width:2px;stroke-dasharray: 2; 5;fill:none;"></path>
+                  <path class="path" d="M75.203125,162L75.203125,187L75.203125,212" marker-end="url(#arrowhead306)" style="stroke-width:2px;stroke-dasharray: 2; 5;fill:none;"></path>
                   <defs>
-                    <marker id="arrowhead198" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8"
+                    <marker id="arrowhead306" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8"
                       markerHeight="6" orient="auto">
                       <path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path>
                     </marker>
@@ -12847,127 +12962,125 @@
           </span>
         </span> become independent, then the triple is considered inactive. Triples that are not inactive are active. An undirected
         path that contains any inactive triple is inactive (active otherwise).</p>
-      <ul>
-        <li>Query:
-          <span class="katex--inline">
-            <span class="katex">
-              <span class="katex-mathml">
-                <math>
-                  <semantics>
+      <p>Query:
+        <span class="katex--inline">
+          <span class="katex">
+            <span class="katex-mathml">
+              <math>
+                <semantics>
+                  <mrow>
+                    <msub>
+                      <mi>X</mi>
+                      <mi>i</mi>
+                    </msub>
+                    <mo>⊥</mo>
+                    <msub>
+                      <mi>X</mi>
+                      <mi>j</mi>
+                    </msub>
+                    <mo>∣</mo>
                     <mrow>
                       <msub>
                         <mi>X</mi>
-                        <mi>i</mi>
+                        <msub>
+                          <mi>k</mi>
+                          <mn>1</mn>
+                        </msub>
                       </msub>
-                      <mo>⊥</mo>
+                      <mo separator="true">,</mo>
+                      <mi mathvariant="normal">.</mi>
+                      <mi mathvariant="normal">.</mi>
+                      <mi mathvariant="normal">.</mi>
+                      <mo separator="true">,</mo>
                       <msub>
                         <mi>X</mi>
-                        <mi>j</mi>
+                        <msub>
+                          <mi>k</mi>
+                          <mi>n</mi>
+                        </msub>
                       </msub>
-                      <mo>∣</mo>
-                      <mrow>
-                        <msub>
-                          <mi>X</mi>
-                          <msub>
-                            <mi>k</mi>
-                            <mn>1</mn>
-                          </msub>
-                        </msub>
-                        <mo separator="true">,</mo>
-                        <mi mathvariant="normal">.</mi>
-                        <mi mathvariant="normal">.</mi>
-                        <mi mathvariant="normal">.</mi>
-                        <mo separator="true">,</mo>
-                        <msub>
-                          <mi>X</mi>
-                          <msub>
-                            <mi>k</mi>
-                            <mi>n</mi>
-                          </msub>
-                        </msub>
-                      </mrow>
                     </mrow>
-                    <annotation encoding="application/x-tex">X_i\perp X_j \mid {X_{k_1},...,X_{k_n}}</annotation>
-                  </semantics>
-                </math>
-              </span>
-              <span class="katex-html" aria-hidden="true">
-                <span class="strut" style="height: 0.75em;"></span>
-                <span class="strut bottom" style="height: 1.03611em; vertical-align: -0.286108em;"></span>
-                <span class="base">
+                  </mrow>
+                  <annotation encoding="application/x-tex">X_i\perp X_j \mid {X_{k_1},...,X_{k_n}}</annotation>
+                </semantics>
+              </math>
+            </span>
+            <span class="katex-html" aria-hidden="true">
+              <span class="strut" style="height: 0.75em;"></span>
+              <span class="strut bottom" style="height: 1.03611em; vertical-align: -0.286108em;"></span>
+              <span class="base">
+                <span class="mord">
+                  <span class="mord mathit" style="margin-right: 0.07847em;">X</span>
+                  <span class="msupsub">
+                    <span class="vlist-t vlist-t2">
+                      <span class="vlist-r">
+                        <span class="vlist" style="height: 0.311664em;">
+                          <span class="" style="top: -2.55em; margin-left: -0.07847em; margin-right: 0.05em;">
+                            <span class="pstrut" style="height: 2.7em;"></span>
+                            <span class="sizing reset-size6 size3 mtight">
+                              <span class="mord mathit mtight">i</span>
+                            </span>
+                          </span>
+                        </span>
+                        <span class="vlist-s">​</span>
+                      </span>
+                      <span class="vlist-r">
+                        <span class="vlist" style="height: 0.15em;"></span>
+                      </span>
+                    </span>
+                  </span>
+                </span>
+                <span class="mrel">⊥</span>
+                <span class="mord">
+                  <span class="mord mathit" style="margin-right: 0.07847em;">X</span>
+                  <span class="msupsub">
+                    <span class="vlist-t vlist-t2">
+                      <span class="vlist-r">
+                        <span class="vlist" style="height: 0.311664em;">
+                          <span class="" style="top: -2.55em; margin-left: -0.07847em; margin-right: 0.05em;">
+                            <span class="pstrut" style="height: 2.7em;"></span>
+                            <span class="sizing reset-size6 size3 mtight">
+                              <span class="mord mathit mtight" style="margin-right: 0.05724em;">j</span>
+                            </span>
+                          </span>
+                        </span>
+                        <span class="vlist-s">​</span>
+                      </span>
+                      <span class="vlist-r">
+                        <span class="vlist" style="height: 0.286108em;"></span>
+                      </span>
+                    </span>
+                  </span>
+                </span>
+                <span class="mrel">∣</span>
+                <span class="mord">
                   <span class="mord">
                     <span class="mord mathit" style="margin-right: 0.07847em;">X</span>
                     <span class="msupsub">
                       <span class="vlist-t vlist-t2">
                         <span class="vlist-r">
-                          <span class="vlist" style="height: 0.311664em;">
+                          <span class="vlist" style="height: 0.336108em;">
                             <span class="" style="top: -2.55em; margin-left: -0.07847em; margin-right: 0.05em;">
                               <span class="pstrut" style="height: 2.7em;"></span>
                               <span class="sizing reset-size6 size3 mtight">
-                                <span class="mord mathit mtight">i</span>
-                              </span>
-                            </span>
-                          </span>
-                          <span class="vlist-s">​</span>
-                        </span>
-                        <span class="vlist-r">
-                          <span class="vlist" style="height: 0.15em;"></span>
-                        </span>
-                      </span>
-                    </span>
-                  </span>
-                  <span class="mrel">⊥</span>
-                  <span class="mord">
-                    <span class="mord mathit" style="margin-right: 0.07847em;">X</span>
-                    <span class="msupsub">
-                      <span class="vlist-t vlist-t2">
-                        <span class="vlist-r">
-                          <span class="vlist" style="height: 0.311664em;">
-                            <span class="" style="top: -2.55em; margin-left: -0.07847em; margin-right: 0.05em;">
-                              <span class="pstrut" style="height: 2.7em;"></span>
-                              <span class="sizing reset-size6 size3 mtight">
-                                <span class="mord mathit mtight" style="margin-right: 0.05724em;">j</span>
-                              </span>
-                            </span>
-                          </span>
-                          <span class="vlist-s">​</span>
-                        </span>
-                        <span class="vlist-r">
-                          <span class="vlist" style="height: 0.286108em;"></span>
-                        </span>
-                      </span>
-                    </span>
-                  </span>
-                  <span class="mrel">∣</span>
-                  <span class="mord">
-                    <span class="mord">
-                      <span class="mord mathit" style="margin-right: 0.07847em;">X</span>
-                      <span class="msupsub">
-                        <span class="vlist-t vlist-t2">
-                          <span class="vlist-r">
-                            <span class="vlist" style="height: 0.336108em;">
-                              <span class="" style="top: -2.55em; margin-left: -0.07847em; margin-right: 0.05em;">
-                                <span class="pstrut" style="height: 2.7em;"></span>
-                                <span class="sizing reset-size6 size3 mtight">
+                                <span class="mord mtight">
                                   <span class="mord mtight">
-                                    <span class="mord mtight">
-                                      <span class="mord mathit mtight" style="margin-right: 0.03148em;">k</span>
-                                      <span class="msupsub">
-                                        <span class="vlist-t vlist-t2">
-                                          <span class="vlist-r">
-                                            <span class="vlist" style="height: 0.317314em;">
-                                              <span class="" style="top: -2.357em; margin-left: -0.03148em; margin-right: 0.0714286em;">
-                                                <span class="pstrut" style="height: 2.5em;"></span>
-                                                <span class="sizing reset-size3 size1 mtight">
-                                                  <span class="mord mathrm mtight">1</span>
-                                                </span>
+                                    <span class="mord mathit mtight" style="margin-right: 0.03148em;">k</span>
+                                    <span class="msupsub">
+                                      <span class="vlist-t vlist-t2">
+                                        <span class="vlist-r">
+                                          <span class="vlist" style="height: 0.317314em;">
+                                            <span class="" style="top: -2.357em; margin-left: -0.03148em; margin-right: 0.0714286em;">
+                                              <span class="pstrut" style="height: 2.5em;"></span>
+                                              <span class="sizing reset-size3 size1 mtight">
+                                                <span class="mord mathrm mtight">1</span>
                                               </span>
                                             </span>
-                                            <span class="vlist-s">​</span>
                                           </span>
-                                          <span class="vlist-r">
-                                            <span class="vlist" style="height: 0.143em;"></span>
-                                          </span>
+                                          <span class="vlist-s">​</span>
+                                        </span>
+                                        <span class="vlist-r">
+                                          <span class="vlist" style="height: 0.143em;"></span>
                                         </span>
                                       </span>
                                     </span>
@@ -12975,47 +13088,47 @@
                                 </span>
                               </span>
                             </span>
-                            <span class="vlist-s">​</span>
                           </span>
-                          <span class="vlist-r">
-                            <span class="vlist" style="height: 0.2501em;"></span>
-                          </span>
+                          <span class="vlist-s">​</span>
+                        </span>
+                        <span class="vlist-r">
+                          <span class="vlist" style="height: 0.2501em;"></span>
                         </span>
                       </span>
                     </span>
-                    <span class="mpunct">,</span>
-                    <span class="mord mathrm">.</span>
-                    <span class="mord mathrm">.</span>
-                    <span class="mord mathrm">.</span>
-                    <span class="mpunct">,</span>
-                    <span class="mord">
-                      <span class="mord mathit" style="margin-right: 0.07847em;">X</span>
-                      <span class="msupsub">
-                        <span class="vlist-t vlist-t2">
-                          <span class="vlist-r">
-                            <span class="vlist" style="height: 0.336108em;">
-                              <span class="" style="top: -2.55em; margin-left: -0.07847em; margin-right: 0.05em;">
-                                <span class="pstrut" style="height: 2.7em;"></span>
-                                <span class="sizing reset-size6 size3 mtight">
+                  </span>
+                  <span class="mpunct">,</span>
+                  <span class="mord mathrm">.</span>
+                  <span class="mord mathrm">.</span>
+                  <span class="mord mathrm">.</span>
+                  <span class="mpunct">,</span>
+                  <span class="mord">
+                    <span class="mord mathit" style="margin-right: 0.07847em;">X</span>
+                    <span class="msupsub">
+                      <span class="vlist-t vlist-t2">
+                        <span class="vlist-r">
+                          <span class="vlist" style="height: 0.336108em;">
+                            <span class="" style="top: -2.55em; margin-left: -0.07847em; margin-right: 0.05em;">
+                              <span class="pstrut" style="height: 2.7em;"></span>
+                              <span class="sizing reset-size6 size3 mtight">
+                                <span class="mord mtight">
                                   <span class="mord mtight">
-                                    <span class="mord mtight">
-                                      <span class="mord mathit mtight" style="margin-right: 0.03148em;">k</span>
-                                      <span class="msupsub">
-                                        <span class="vlist-t vlist-t2">
-                                          <span class="vlist-r">
-                                            <span class="vlist" style="height: 0.164543em;">
-                                              <span class="" style="top: -2.357em; margin-left: -0.03148em; margin-right: 0.0714286em;">
-                                                <span class="pstrut" style="height: 2.5em;"></span>
-                                                <span class="sizing reset-size3 size1 mtight">
-                                                  <span class="mord mathit mtight">n</span>
-                                                </span>
+                                    <span class="mord mathit mtight" style="margin-right: 0.03148em;">k</span>
+                                    <span class="msupsub">
+                                      <span class="vlist-t vlist-t2">
+                                        <span class="vlist-r">
+                                          <span class="vlist" style="height: 0.164543em;">
+                                            <span class="" style="top: -2.357em; margin-left: -0.03148em; margin-right: 0.0714286em;">
+                                              <span class="pstrut" style="height: 2.5em;"></span>
+                                              <span class="sizing reset-size3 size1 mtight">
+                                                <span class="mord mathit mtight">n</span>
                                               </span>
                                             </span>
-                                            <span class="vlist-s">​</span>
                                           </span>
-                                          <span class="vlist-r">
-                                            <span class="vlist" style="height: 0.143em;"></span>
-                                          </span>
+                                          <span class="vlist-s">​</span>
+                                        </span>
+                                        <span class="vlist-r">
+                                          <span class="vlist" style="height: 0.143em;"></span>
                                         </span>
                                       </span>
                                     </span>
@@ -13023,11 +13136,11 @@
                                 </span>
                               </span>
                             </span>
-                            <span class="vlist-s">​</span>
                           </span>
-                          <span class="vlist-r">
-                            <span class="vlist" style="height: 0.2501em;"></span>
-                          </span>
+                          <span class="vlist-s">​</span>
+                        </span>
+                        <span class="vlist-r">
+                          <span class="vlist" style="height: 0.2501em;"></span>
                         </span>
                       </span>
                     </span>
@@ -13035,7 +13148,9 @@
                 </span>
               </span>
             </span>
-          </span>?</li>
+          </span>
+        </span>?</p>
+      <ul>
         <li>Check all undirected paths between
           <span class="katex--inline">
             <span class="katex">
@@ -13134,8 +13249,1004 @@
       <p>If the set of conditional independences of Bayes’ net A is a subset of the set of conditional independences of Bayes’
         net B, then all distributions in A can be encoded in the structure of B.</p>
       <h3 id="inference">Inference</h3>
+      <ul>
+        <li>Posterior Probability:
+          <span class="katex--inline">
+            <span class="katex">
+              <span class="katex-mathml">
+                <math>
+                  <semantics>
+                    <mrow>
+                      <mi>P</mi>
+                      <mo>(</mo>
+                      <mi>Q</mi>
+                      <mo>∣</mo>
+                      <msub>
+                        <mi>E</mi>
+                        <mn>1</mn>
+                      </msub>
+                      <mo>=</mo>
+                      <msub>
+                        <mi>e</mi>
+                        <mn>1</mn>
+                      </msub>
+                      <mo separator="true">,</mo>
+                      <mi mathvariant="normal">.</mi>
+                      <mi mathvariant="normal">.</mi>
+                      <mi mathvariant="normal">.</mi>
+                      <msub>
+                        <mi>E</mi>
+                        <mi>k</mi>
+                      </msub>
+                      <mo>=</mo>
+                      <msub>
+                        <mi>e</mi>
+                        <mi>k</mi>
+                      </msub>
+                      <mo>)</mo>
+                    </mrow>
+                    <annotation encoding="application/x-tex">P(Q\mid E_1 = e_1,...E_k=e_k)</annotation>
+                  </semantics>
+                </math>
+              </span>
+              <span class="katex-html" aria-hidden="true">
+                <span class="strut" style="height: 0.75em;"></span>
+                <span class="strut bottom" style="height: 1em; vertical-align: -0.25em;"></span>
+                <span class="base">
+                  <span class="mord mathit" style="margin-right: 0.13889em;">P</span>
+                  <span class="mopen">(</span>
+                  <span class="mord mathit">Q</span>
+                  <span class="mrel">∣</span>
+                  <span class="mord">
+                    <span class="mord mathit" style="margin-right: 0.05764em;">E</span>
+                    <span class="msupsub">
+                      <span class="vlist-t vlist-t2">
+                        <span class="vlist-r">
+                          <span class="vlist" style="height: 0.301108em;">
+                            <span class="" style="top: -2.55em; margin-left: -0.05764em; margin-right: 0.05em;">
+                              <span class="pstrut" style="height: 2.7em;"></span>
+                              <span class="sizing reset-size6 size3 mtight">
+                                <span class="mord mathrm mtight">1</span>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="vlist-s">​</span>
+                        </span>
+                        <span class="vlist-r">
+                          <span class="vlist" style="height: 0.15em;"></span>
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                  <span class="mrel">=</span>
+                  <span class="mord">
+                    <span class="mord mathit">e</span>
+                    <span class="msupsub">
+                      <span class="vlist-t vlist-t2">
+                        <span class="vlist-r">
+                          <span class="vlist" style="height: 0.301108em;">
+                            <span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;">
+                              <span class="pstrut" style="height: 2.7em;"></span>
+                              <span class="sizing reset-size6 size3 mtight">
+                                <span class="mord mathrm mtight">1</span>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="vlist-s">​</span>
+                        </span>
+                        <span class="vlist-r">
+                          <span class="vlist" style="height: 0.15em;"></span>
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                  <span class="mpunct">,</span>
+                  <span class="mord mathrm">.</span>
+                  <span class="mord mathrm">.</span>
+                  <span class="mord mathrm">.</span>
+                  <span class="mord">
+                    <span class="mord mathit" style="margin-right: 0.05764em;">E</span>
+                    <span class="msupsub">
+                      <span class="vlist-t vlist-t2">
+                        <span class="vlist-r">
+                          <span class="vlist" style="height: 0.336108em;">
+                            <span class="" style="top: -2.55em; margin-left: -0.05764em; margin-right: 0.05em;">
+                              <span class="pstrut" style="height: 2.7em;"></span>
+                              <span class="sizing reset-size6 size3 mtight">
+                                <span class="mord mathit mtight" style="margin-right: 0.03148em;">k</span>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="vlist-s">​</span>
+                        </span>
+                        <span class="vlist-r">
+                          <span class="vlist" style="height: 0.15em;"></span>
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                  <span class="mrel">=</span>
+                  <span class="mord">
+                    <span class="mord mathit">e</span>
+                    <span class="msupsub">
+                      <span class="vlist-t vlist-t2">
+                        <span class="vlist-r">
+                          <span class="vlist" style="height: 0.336108em;">
+                            <span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;">
+                              <span class="pstrut" style="height: 2.7em;"></span>
+                              <span class="sizing reset-size6 size3 mtight">
+                                <span class="mord mathit mtight" style="margin-right: 0.03148em;">k</span>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="vlist-s">​</span>
+                        </span>
+                        <span class="vlist-r">
+                          <span class="vlist" style="height: 0.15em;"></span>
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                  <span class="mclose">)</span>
+                </span>
+              </span>
+            </span>
+          </span>
+        </li>
+        <li>Most likely explanation:
+          <span class="katex--inline">
+            <span class="katex">
+              <span class="katex-mathml">
+                <math>
+                  <semantics>
+                    <mrow>
+                      <mtext>arg</mtext>
+                      <msub>
+                        <mi>max</mi>
+                        <mo>⁡</mo>
+                        <mi>q</mi>
+                      </msub>
+                      <mi>P</mi>
+                      <mo>(</mo>
+                      <mi>Q</mi>
+                      <mo>=</mo>
+                      <mi>q</mi>
+                      <mo>∣</mo>
+                      <msub>
+                        <mi>E</mi>
+                        <mn>1</mn>
+                      </msub>
+                      <mo>=</mo>
+                      <msub>
+                        <mi>e</mi>
+                        <mn>1</mn>
+                      </msub>
+                      <mo separator="true">,</mo>
+                      <mi mathvariant="normal">.</mi>
+                      <mi mathvariant="normal">.</mi>
+                      <mi mathvariant="normal">.</mi>
+                      <msub>
+                        <mi>E</mi>
+                        <mi>k</mi>
+                      </msub>
+                      <mo>=</mo>
+                      <msub>
+                        <mi>e</mi>
+                        <mi>k</mi>
+                      </msub>
+                      <mo>)</mo>
+                    </mrow>
+                    <annotation encoding="application/x-tex">\text{arg}\max_q P(Q=q \mid E_1=e_1,...E_k=e_k)</annotation>
+                  </semantics>
+                </math>
+              </span>
+              <span class="katex-html" aria-hidden="true">
+                <span class="strut" style="height: 0.75em;"></span>
+                <span class="strut bottom" style="height: 1.03611em; vertical-align: -0.286108em;"></span>
+                <span class="base">
+                  <span class="mord text">
+                    <span class="mord mathrm">arg</span>
+                  </span>
+                  <span class="mop">
+                    <span class="mop">max</span>
+                    <span class="msupsub">
+                      <span class="vlist-t vlist-t2">
+                        <span class="vlist-r">
+                          <span class="vlist" style="height: 0.151392em;">
+                            <span class="" style="top: -2.55em; margin-right: 0.05em;">
+                              <span class="pstrut" style="height: 2.7em;"></span>
+                              <span class="sizing reset-size6 size3 mtight">
+                                <span class="mord mathit mtight" style="margin-right: 0.03588em;">q</span>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="vlist-s">​</span>
+                        </span>
+                        <span class="vlist-r">
+                          <span class="vlist" style="height: 0.286108em;"></span>
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                  <span class="mord mathit" style="margin-right: 0.13889em;">P</span>
+                  <span class="mopen">(</span>
+                  <span class="mord mathit">Q</span>
+                  <span class="mrel">=</span>
+                  <span class="mord mathit" style="margin-right: 0.03588em;">q</span>
+                  <span class="mrel">∣</span>
+                  <span class="mord">
+                    <span class="mord mathit" style="margin-right: 0.05764em;">E</span>
+                    <span class="msupsub">
+                      <span class="vlist-t vlist-t2">
+                        <span class="vlist-r">
+                          <span class="vlist" style="height: 0.301108em;">
+                            <span class="" style="top: -2.55em; margin-left: -0.05764em; margin-right: 0.05em;">
+                              <span class="pstrut" style="height: 2.7em;"></span>
+                              <span class="sizing reset-size6 size3 mtight">
+                                <span class="mord mathrm mtight">1</span>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="vlist-s">​</span>
+                        </span>
+                        <span class="vlist-r">
+                          <span class="vlist" style="height: 0.15em;"></span>
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                  <span class="mrel">=</span>
+                  <span class="mord">
+                    <span class="mord mathit">e</span>
+                    <span class="msupsub">
+                      <span class="vlist-t vlist-t2">
+                        <span class="vlist-r">
+                          <span class="vlist" style="height: 0.301108em;">
+                            <span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;">
+                              <span class="pstrut" style="height: 2.7em;"></span>
+                              <span class="sizing reset-size6 size3 mtight">
+                                <span class="mord mathrm mtight">1</span>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="vlist-s">​</span>
+                        </span>
+                        <span class="vlist-r">
+                          <span class="vlist" style="height: 0.15em;"></span>
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                  <span class="mpunct">,</span>
+                  <span class="mord mathrm">.</span>
+                  <span class="mord mathrm">.</span>
+                  <span class="mord mathrm">.</span>
+                  <span class="mord">
+                    <span class="mord mathit" style="margin-right: 0.05764em;">E</span>
+                    <span class="msupsub">
+                      <span class="vlist-t vlist-t2">
+                        <span class="vlist-r">
+                          <span class="vlist" style="height: 0.336108em;">
+                            <span class="" style="top: -2.55em; margin-left: -0.05764em; margin-right: 0.05em;">
+                              <span class="pstrut" style="height: 2.7em;"></span>
+                              <span class="sizing reset-size6 size3 mtight">
+                                <span class="mord mathit mtight" style="margin-right: 0.03148em;">k</span>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="vlist-s">​</span>
+                        </span>
+                        <span class="vlist-r">
+                          <span class="vlist" style="height: 0.15em;"></span>
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                  <span class="mrel">=</span>
+                  <span class="mord">
+                    <span class="mord mathit">e</span>
+                    <span class="msupsub">
+                      <span class="vlist-t vlist-t2">
+                        <span class="vlist-r">
+                          <span class="vlist" style="height: 0.336108em;">
+                            <span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;">
+                              <span class="pstrut" style="height: 2.7em;"></span>
+                              <span class="sizing reset-size6 size3 mtight">
+                                <span class="mord mathit mtight" style="margin-right: 0.03148em;">k</span>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="vlist-s">​</span>
+                        </span>
+                        <span class="vlist-r">
+                          <span class="vlist" style="height: 0.15em;"></span>
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                  <span class="mclose">)</span>
+                </span>
+              </span>
+            </span>
+          </span>
+        </li>
+      </ul>
       <h4 id="enumeration">Enumeration</h4>
-      <h4 id="variable-elimination">Variable elimination</h4>
+      <div class="mermaid">
+        <svg xmlns="http://www.w3.org/2000/svg" id="mermaid-svg-d3nctJv92IlTqF8O" height="100%" viewBox="0 0 172.91796875 298"
+          style="max-width:172.91796875px;">
+          <g>
+            <g class="output">
+              <g class="clusters"></g>
+              <g class="edgePaths">
+                <g class="edgePath" style="opacity: 1;">
+                  <path class="path" d="M35.1796875,66L35.1796875,91L59.66015625,120.44845814977974" marker-end="url(#arrowhead320)"
+                    style="fill:none"></path>
+                  <defs>
+                    <marker id="arrowhead320" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8"
+                      markerHeight="6" orient="auto">
+                      <path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path>
+                    </marker>
+                  </defs>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path class="path" d="M114.984375,66L114.984375,91L90.50390625,120.44845814977974" marker-end="url(#arrowhead321)"
+                    style="fill:none"></path>
+                  <defs>
+                    <marker id="arrowhead321" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8"
+                      markerHeight="6" orient="auto">
+                      <path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path>
+                    </marker>
+                  </defs>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path class="path" d="M59.66015625,157.32018561484918L34.67578125,187L34.67578125,212" marker-end="url(#arrowhead322)"
+                    style="fill:none"></path>
+                  <defs>
+                    <marker id="arrowhead322" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8"
+                      markerHeight="6" orient="auto">
+                      <path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path>
+                    </marker>
+                  </defs>
+                </g>
+                <g class="edgePath" style="opacity: 1;">
+                  <path class="path" d="M90.50390625,157.32018561484918L115.48828125,187L115.48828125,212" marker-end="url(#arrowhead323)"
+                    style="fill:none"></path>
+                  <defs>
+                    <marker id="arrowhead323" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8"
+                      markerHeight="6" orient="auto">
+                      <path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path>
+                    </marker>
+                  </defs>
+                </g>
+              </g>
+              <g class="edgeLabels">
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <foreignObject width="0" height="0">
+                      <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                        <span class="edgeLabel"></span>
+                      </div>
+                    </foreignObject>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <foreignObject width="0" height="0">
+                      <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                        <span class="edgeLabel"></span>
+                      </div>
+                    </foreignObject>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <foreignObject width="0" height="0">
+                      <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                        <span class="edgeLabel"></span>
+                      </div>
+                    </foreignObject>
+                  </g>
+                </g>
+                <g class="edgeLabel" transform="" style="opacity: 1;">
+                  <g transform="translate(0,0)" class="label">
+                    <foreignObject width="0" height="0">
+                      <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                        <span class="edgeLabel"></span>
+                      </div>
+                    </foreignObject>
+                  </g>
+                </g>
+              </g>
+              <g class="nodes">
+                <g class="node" id="B" transform="translate(35.1796875,43)" style="opacity: 1;">
+                  <rect rx="0" ry="0" x="-15.1796875" y="-23" width="30.359375" height="46"></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-5.1796875,-13)">
+                      <foreignObject width="10.359375" height="26">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">B</div>
+                      </foreignObject>
+                    </g>
+                  </g>
+                </g>
+                <g class="node" id="A" transform="translate(75.08203125,139)" style="opacity: 1;">
+                  <rect rx="0" ry="0" x="-15.421875" y="-23" width="30.84375" height="46"></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-5.421875,-13)">
+                      <foreignObject width="10.84375" height="26">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">A</div>
+                      </foreignObject>
+                    </g>
+                  </g>
+                </g>
+                <g class="node" id="E" transform="translate(114.984375,43)" style="opacity: 1;">
+                  <rect rx="0" ry="0" x="-14.625" y="-23" width="29.25" height="46"></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-4.625,-13)">
+                      <foreignObject width="9.25" height="26">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">E</div>
+                      </foreignObject>
+                    </g>
+                  </g>
+                </g>
+                <g class="node" id="J" transform="translate(34.67578125,235)" style="opacity: 1;">
+                  <rect rx="0" ry="0" x="-13.3828125" y="-23" width="26.765625" height="46"></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-3.3828125,-13)">
+                      <foreignObject width="6.765625" height="26">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">J</div>
+                      </foreignObject>
+                    </g>
+                  </g>
+                </g>
+                <g class="node" id="M" transform="translate(115.48828125,235)" style="opacity: 1;">
+                  <rect rx="0" ry="0" x="-17.4296875" y="-23" width="34.859375" height="46"></rect>
+                  <g class="label" transform="translate(0,0)">
+                    <g transform="translate(-7.4296875,-13)">
+                      <foreignObject width="14.859375" height="26">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">M</div>
+                      </foreignObject>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <p>
+        <span class="katex--display">
+          <span class="katex-display">
+            <span class="katex">
+              <span class="katex-mathml">
+                <math>
+                  <semantics>
+                    <mrow>
+                      <mi>P</mi>
+                      <mo>(</mo>
+                      <mi>B</mi>
+                      <mo>∣</mo>
+                      <mo>+</mo>
+                      <mi>j</mi>
+                      <mo separator="true">,</mo>
+                      <mo>+</mo>
+                      <mi>m</mi>
+                      <mo>)</mo>
+                      <msub>
+                        <mo>∝</mo>
+                        <mi>B</mi>
+                      </msub>
+                      <mi>P</mi>
+                      <mo>(</mo>
+                      <mi>B</mi>
+                      <mo separator="true">,</mo>
+                      <mo>+</mo>
+                      <mi>j</mi>
+                      <mo separator="true">,</mo>
+                      <mo>+</mo>
+                      <mi>m</mi>
+                      <mo>)</mo>
+                    </mrow>
+                    <annotation encoding="application/x-tex">P(B\mid +j, +m)\propto_B P(B,+j,+m)</annotation>
+                  </semantics>
+                </math>
+              </span>
+              <span class="katex-html" aria-hidden="true">
+                <span class="strut" style="height: 0.75em;"></span>
+                <span class="strut bottom" style="height: 1em; vertical-align: -0.25em;"></span>
+                <span class="base">
+                  <span class="mord mathit" style="margin-right: 0.13889em;">P</span>
+                  <span class="mopen">(</span>
+                  <span class="mord mathit" style="margin-right: 0.05017em;">B</span>
+                  <span class="mrel">∣</span>
+                  <span class="mord">+</span>
+                  <span class="mord mathit" style="margin-right: 0.05724em;">j</span>
+                  <span class="mpunct">,</span>
+                  <span class="mord">+</span>
+                  <span class="mord mathit">m</span>
+                  <span class="mclose">)</span>
+                  <span class="mrel">
+                    <span class="mrel">∝</span>
+                    <span class="msupsub">
+                      <span class="vlist-t vlist-t2">
+                        <span class="vlist-r">
+                          <span class="vlist" style="height: 0.328331em;">
+                            <span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;">
+                              <span class="pstrut" style="height: 2.7em;"></span>
+                              <span class="sizing reset-size6 size3 mtight">
+                                <span class="mord mathit mtight" style="margin-right: 0.05017em;">B</span>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="vlist-s">​</span>
+                        </span>
+                        <span class="vlist-r">
+                          <span class="vlist" style="height: 0.15em;"></span>
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                  <span class="mord mathit" style="margin-right: 0.13889em;">P</span>
+                  <span class="mopen">(</span>
+                  <span class="mord mathit" style="margin-right: 0.05017em;">B</span>
+                  <span class="mpunct">,</span>
+                  <span class="mord">+</span>
+                  <span class="mord mathit" style="margin-right: 0.05724em;">j</span>
+                  <span class="mpunct">,</span>
+                  <span class="mord">+</span>
+                  <span class="mord mathit">m</span>
+                  <span class="mclose">)</span>
+                </span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </p>
+      <p>
+        <span class="katex--display">
+          <span class="katex-display">
+            <span class="katex">
+              <span class="katex-mathml">
+                <math>
+                  <semantics>
+                    <mrow>
+                      <mo>=</mo>
+                      <msub>
+                        <mo>∑</mo>
+                        <mrow>
+                          <mi>e</mi>
+                          <mo separator="true">,</mo>
+                          <mi>a</mi>
+                        </mrow>
+                      </msub>
+                      <mi>P</mi>
+                      <mo>(</mo>
+                      <mi>B</mi>
+                      <mo separator="true">,</mo>
+                      <mi>e</mi>
+                      <mo separator="true">,</mo>
+                      <mi>a</mi>
+                      <mo separator="true">,</mo>
+                      <mo>+</mo>
+                      <mi>j</mi>
+                      <mo separator="true">,</mo>
+                      <mo>+</mo>
+                      <mi>m</mi>
+                      <mo>)</mo>
+                    </mrow>
+                    <annotation encoding="application/x-tex">=\sum_{e,a}P(B,e,a,+j,+m)</annotation>
+                  </semantics>
+                </math>
+              </span>
+              <span class="katex-html" aria-hidden="true">
+                <span class="strut" style="height: 1.05001em;"></span>
+                <span class="strut bottom" style="height: 2.43612em; vertical-align: -1.38611em;"></span>
+                <span class="base">
+                  <span class="mrel">=</span>
+                  <span class="mop op-limits">
+                    <span class="vlist-t vlist-t2">
+                      <span class="vlist-r">
+                        <span class="vlist" style="height: 1.05001em;">
+                          <span class="" style="top: -1.89999em; margin-left: 0em;">
+                            <span class="pstrut" style="height: 3.05em;"></span>
+                            <span class="sizing reset-size6 size3 mtight">
+                              <span class="mord mtight">
+                                <span class="mord mathit mtight">e</span>
+                                <span class="mpunct mtight">,</span>
+                                <span class="mord mathit mtight">a</span>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="" style="top: -3.05001em;">
+                            <span class="pstrut" style="height: 3.05em;"></span>
+                            <span class="">
+                              <span class="mop op-symbol large-op">∑</span>
+                            </span>
+                          </span>
+                        </span>
+                        <span class="vlist-s">​</span>
+                      </span>
+                      <span class="vlist-r">
+                        <span class="vlist" style="height: 1.38611em;"></span>
+                      </span>
+                    </span>
+                  </span>
+                  <span class="mord mathit" style="margin-right: 0.13889em;">P</span>
+                  <span class="mopen">(</span>
+                  <span class="mord mathit" style="margin-right: 0.05017em;">B</span>
+                  <span class="mpunct">,</span>
+                  <span class="mord mathit">e</span>
+                  <span class="mpunct">,</span>
+                  <span class="mord mathit">a</span>
+                  <span class="mpunct">,</span>
+                  <span class="mord">+</span>
+                  <span class="mord mathit" style="margin-right: 0.05724em;">j</span>
+                  <span class="mpunct">,</span>
+                  <span class="mord">+</span>
+                  <span class="mord mathit">m</span>
+                  <span class="mclose">)</span>
+                </span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </p>
+      <p>
+        <span class="katex--display">
+          <span class="katex-display">
+            <span class="katex">
+              <span class="katex-mathml">
+                <math>
+                  <semantics>
+                    <mrow>
+                      <mo>=</mo>
+                      <msub>
+                        <mo>∑</mo>
+                        <mrow>
+                          <mi>e</mi>
+                          <mo separator="true">,</mo>
+                          <mi>a</mi>
+                        </mrow>
+                      </msub>
+                      <mi>P</mi>
+                      <mo>(</mo>
+                      <mi>B</mi>
+                      <mo>)</mo>
+                      <mi>P</mi>
+                      <mo>(</mo>
+                      <mi>e</mi>
+                      <mo>)</mo>
+                      <mi>P</mi>
+                      <mo>(</mo>
+                      <mi>a</mi>
+                      <mo>∣</mo>
+                      <mi>B</mi>
+                      <mo separator="true">,</mo>
+                      <mi>e</mi>
+                      <mo>)</mo>
+                      <mi>P</mi>
+                      <mo>(</mo>
+                      <mo>+</mo>
+                      <mi>j</mi>
+                      <mo>∣</mo>
+                      <mi>a</mi>
+                      <mo>)</mo>
+                      <mi>P</mi>
+                      <mo>(</mo>
+                      <mo>+</mo>
+                      <mi>m</mi>
+                      <mo>∣</mo>
+                      <mi>a</mi>
+                      <mo>)</mo>
+                    </mrow>
+                    <annotation encoding="application/x-tex">=\sum_{e,a}P(B)P(e)P(a\mid B,e)P(+j\mid a)P(+m\mid a)</annotation>
+                  </semantics>
+                </math>
+              </span>
+              <span class="katex-html" aria-hidden="true">
+                <span class="strut" style="height: 1.05001em;"></span>
+                <span class="strut bottom" style="height: 2.43612em; vertical-align: -1.38611em;"></span>
+                <span class="base">
+                  <span class="mrel">=</span>
+                  <span class="mop op-limits">
+                    <span class="vlist-t vlist-t2">
+                      <span class="vlist-r">
+                        <span class="vlist" style="height: 1.05001em;">
+                          <span class="" style="top: -1.89999em; margin-left: 0em;">
+                            <span class="pstrut" style="height: 3.05em;"></span>
+                            <span class="sizing reset-size6 size3 mtight">
+                              <span class="mord mtight">
+                                <span class="mord mathit mtight">e</span>
+                                <span class="mpunct mtight">,</span>
+                                <span class="mord mathit mtight">a</span>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="" style="top: -3.05001em;">
+                            <span class="pstrut" style="height: 3.05em;"></span>
+                            <span class="">
+                              <span class="mop op-symbol large-op">∑</span>
+                            </span>
+                          </span>
+                        </span>
+                        <span class="vlist-s">​</span>
+                      </span>
+                      <span class="vlist-r">
+                        <span class="vlist" style="height: 1.38611em;"></span>
+                      </span>
+                    </span>
+                  </span>
+                  <span class="mord mathit" style="margin-right: 0.13889em;">P</span>
+                  <span class="mopen">(</span>
+                  <span class="mord mathit" style="margin-right: 0.05017em;">B</span>
+                  <span class="mclose">)</span>
+                  <span class="mord mathit" style="margin-right: 0.13889em;">P</span>
+                  <span class="mopen">(</span>
+                  <span class="mord mathit">e</span>
+                  <span class="mclose">)</span>
+                  <span class="mord mathit" style="margin-right: 0.13889em;">P</span>
+                  <span class="mopen">(</span>
+                  <span class="mord mathit">a</span>
+                  <span class="mrel">∣</span>
+                  <span class="mord mathit" style="margin-right: 0.05017em;">B</span>
+                  <span class="mpunct">,</span>
+                  <span class="mord mathit">e</span>
+                  <span class="mclose">)</span>
+                  <span class="mord mathit" style="margin-right: 0.13889em;">P</span>
+                  <span class="mopen">(</span>
+                  <span class="mord">+</span>
+                  <span class="mord mathit" style="margin-right: 0.05724em;">j</span>
+                  <span class="mrel">∣</span>
+                  <span class="mord mathit">a</span>
+                  <span class="mclose">)</span>
+                  <span class="mord mathit" style="margin-right: 0.13889em;">P</span>
+                  <span class="mopen">(</span>
+                  <span class="mord">+</span>
+                  <span class="mord mathit">m</span>
+                  <span class="mrel">∣</span>
+                  <span class="mord mathit">a</span>
+                  <span class="mclose">)</span>
+                </span>
+              </span>
+            </span>
+          </span>
+        </span>
+      </p>
+      <h4 id="variable-elimination">Variable Elimination</h4>
+      <p>Factors</p>
+      <ol>
+        <li>Joint distribution:
+          <span class="katex--inline">
+            <span class="katex">
+              <span class="katex-mathml">
+                <math>
+                  <semantics>
+                    <mrow>
+                      <mi>P</mi>
+                      <mo>(</mo>
+                      <mi>X</mi>
+                      <mo separator="true">,</mo>
+                      <mi>Y</mi>
+                      <mo>)</mo>
+                    </mrow>
+                    <annotation encoding="application/x-tex">P(X,Y)</annotation>
+                  </semantics>
+                </math>
+              </span>
+              <span class="katex-html" aria-hidden="true">
+                <span class="strut" style="height: 0.75em;"></span>
+                <span class="strut bottom" style="height: 1em; vertical-align: -0.25em;"></span>
+                <span class="base">
+                  <span class="mord mathit" style="margin-right: 0.13889em;">P</span>
+                  <span class="mopen">(</span>
+                  <span class="mord mathit" style="margin-right: 0.07847em;">X</span>
+                  <span class="mpunct">,</span>
+                  <span class="mord mathit" style="margin-right: 0.22222em;">Y</span>
+                  <span class="mclose">)</span>
+                </span>
+              </span>
+            </span>
+          </span> sums to 1.</li>
+        <li>Selected joint:
+          <span class="katex--inline">
+            <span class="katex">
+              <span class="katex-mathml">
+                <math>
+                  <semantics>
+                    <mrow>
+                      <mi>P</mi>
+                      <mo>(</mo>
+                      <mi>x</mi>
+                      <mo separator="true">,</mo>
+                      <mi>Y</mi>
+                      <mo>)</mo>
+                    </mrow>
+                    <annotation encoding="application/x-tex">P(x,Y)</annotation>
+                  </semantics>
+                </math>
+              </span>
+              <span class="katex-html" aria-hidden="true">
+                <span class="strut" style="height: 0.75em;"></span>
+                <span class="strut bottom" style="height: 1em; vertical-align: -0.25em;"></span>
+                <span class="base">
+                  <span class="mord mathit" style="margin-right: 0.13889em;">P</span>
+                  <span class="mopen">(</span>
+                  <span class="mord mathit">x</span>
+                  <span class="mpunct">,</span>
+                  <span class="mord mathit" style="margin-right: 0.22222em;">Y</span>
+                  <span class="mclose">)</span>
+                </span>
+              </span>
+            </span>
+          </span> sums to
+          <span class="katex--inline">
+            <span class="katex">
+              <span class="katex-mathml">
+                <math>
+                  <semantics>
+                    <mrow>
+                      <mi>P</mi>
+                      <mo>(</mo>
+                      <mi>x</mi>
+                      <mo>)</mo>
+                    </mrow>
+                    <annotation encoding="application/x-tex">P(x)</annotation>
+                  </semantics>
+                </math>
+              </span>
+              <span class="katex-html" aria-hidden="true">
+                <span class="strut" style="height: 0.75em;"></span>
+                <span class="strut bottom" style="height: 1em; vertical-align: -0.25em;"></span>
+                <span class="base">
+                  <span class="mord mathit" style="margin-right: 0.13889em;">P</span>
+                  <span class="mopen">(</span>
+                  <span class="mord mathit">x</span>
+                  <span class="mclose">)</span>
+                </span>
+              </span>
+            </span>
+          </span>.</li>
+        <li>Single conditional:
+          <span class="katex--inline">
+            <span class="katex">
+              <span class="katex-mathml">
+                <math>
+                  <semantics>
+                    <mrow>
+                      <mi>P</mi>
+                      <mo>(</mo>
+                      <mi>Y</mi>
+                      <mo>∣</mo>
+                      <mi>x</mi>
+                      <mo>)</mo>
+                    </mrow>
+                    <annotation encoding="application/x-tex">P(Y\mid x)</annotation>
+                  </semantics>
+                </math>
+              </span>
+              <span class="katex-html" aria-hidden="true">
+                <span class="strut" style="height: 0.75em;"></span>
+                <span class="strut bottom" style="height: 1em; vertical-align: -0.25em;"></span>
+                <span class="base">
+                  <span class="mord mathit" style="margin-right: 0.13889em;">P</span>
+                  <span class="mopen">(</span>
+                  <span class="mord mathit" style="margin-right: 0.22222em;">Y</span>
+                  <span class="mrel">∣</span>
+                  <span class="mord mathit">x</span>
+                  <span class="mclose">)</span>
+                </span>
+              </span>
+            </span>
+          </span> sums to 1.</li>
+        <li>Family of conditionals:
+          <span class="katex--inline">
+            <span class="katex">
+              <span class="katex-mathml">
+                <math>
+                  <semantics>
+                    <mrow>
+                      <mi>P</mi>
+                      <mo>(</mo>
+                      <mi>Y</mi>
+                      <mo>∣</mo>
+                      <mi>X</mi>
+                      <mo>)</mo>
+                    </mrow>
+                    <annotation encoding="application/x-tex">P(Y\mid X)</annotation>
+                  </semantics>
+                </math>
+              </span>
+              <span class="katex-html" aria-hidden="true">
+                <span class="strut" style="height: 0.75em;"></span>
+                <span class="strut bottom" style="height: 1em; vertical-align: -0.25em;"></span>
+                <span class="base">
+                  <span class="mord mathit" style="margin-right: 0.13889em;">P</span>
+                  <span class="mopen">(</span>
+                  <span class="mord mathit" style="margin-right: 0.22222em;">Y</span>
+                  <span class="mrel">∣</span>
+                  <span class="mord mathit" style="margin-right: 0.07847em;">X</span>
+                  <span class="mclose">)</span>
+                </span>
+              </span>
+            </span>
+          </span> sums to
+          <span class="katex--inline">
+            <span class="katex">
+              <span class="katex-mathml">
+                <math>
+                  <semantics>
+                    <mrow>
+                      <mi mathvariant="normal">∣</mi>
+                      <mi>Y</mi>
+                      <mi mathvariant="normal">∣</mi>
+                    </mrow>
+                    <annotation encoding="application/x-tex">|Y|</annotation>
+                  </semantics>
+                </math>
+              </span>
+              <span class="katex-html" aria-hidden="true">
+                <span class="strut" style="height: 0.75em;"></span>
+                <span class="strut bottom" style="height: 1em; vertical-align: -0.25em;"></span>
+                <span class="base">
+                  <span class="mord mathrm">∣</span>
+                  <span class="mord mathit" style="margin-right: 0.22222em;">Y</span>
+                  <span class="mord mathrm">∣</span>
+                </span>
+              </span>
+            </span>
+          </span>
+        </li>
+        <li>Specified family:
+          <span class="katex--inline">
+            <span class="katex">
+              <span class="katex-mathml">
+                <math>
+                  <semantics>
+                    <mrow>
+                      <mi>P</mi>
+                      <mo>(</mo>
+                      <mi>y</mi>
+                      <mo>∣</mo>
+                      <mi>X</mi>
+                      <mo>)</mo>
+                    </mrow>
+                    <annotation encoding="application/x-tex">P(y\mid X)</annotation>
+                  </semantics>
+                </math>
+              </span>
+              <span class="katex-html" aria-hidden="true">
+                <span class="strut" style="height: 0.75em;"></span>
+                <span class="strut bottom" style="height: 1em; vertical-align: -0.25em;"></span>
+                <span class="base">
+                  <span class="mord mathit" style="margin-right: 0.13889em;">P</span>
+                  <span class="mopen">(</span>
+                  <span class="mord mathit" style="margin-right: 0.03588em;">y</span>
+                  <span class="mrel">∣</span>
+                  <span class="mord mathit" style="margin-right: 0.07847em;">X</span>
+                  <span class="mclose">)</span>
+                </span>
+              </span>
+            </span>
+          </span> sums inconsistently.</li>
+      </ol>
+      <p>
+        <strong>Variable Elimination</strong>:</p>
+      <ol>
+        <li>
+          <strong>Initialize</strong>: Delete all entries in all factors that are inconsistent with evidence.</li>
+        <li>Pick a hidden variable (probably the one in the least factors).</li>
+        <li>
+          <strong>Join</strong>: Get all factors that include the joining variable. Build joint factor by multiplying consistent
+          entries across factors.</li>
+        <li>
+          <strong>Marginalize</strong>: Sum entries in the joint factor that differ only by the marginalizing variable.</li>
+        <li>
+          <strong>Repeat</strong> steps 2 through 3 until you have eliminated all hidden variables.</li>
+        <li>Join any remaining factors.</li>
+        <li>
+          <strong>Normalize</strong>: Divide each entry in your joint table by the sum of all the entries.</li>
+      </ol>
+      <p>Use the above to eliminate hidden variables. Eliminate variables in the most factors.</p>
       <h2 id="machine-learning">Machine Learning</h2>
       <h3 id="naive-bayes">Naive Bayes</h3>
       <p>

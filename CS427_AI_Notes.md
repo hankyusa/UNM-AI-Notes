@@ -106,7 +106,7 @@ Like a search problem, but searching for a policy instead of a plan. A policy is
 - Value Iteration
   - $V_0(s)=0$
   - $V_{k+1}(s)\leftarrow \max_a \sum_{s'} T(s,a,s') [R(s,a,s')+\gamma V_k(s')]$
-  - Complexity of each iteration is $O(\|S\|^2\cdot \|A\|)$
+  - Complexity of each iteration is $O(|S|^2\cdot |A|)$
   - $\lim_{k \rightarrow \infty} V_k(s) = V^*(s)$
   - Policies converge long before values do which means value iteration tends to over do it.
 - Policy Evaluation
@@ -114,7 +114,7 @@ Like a search problem, but searching for a policy instead of a plan. A policy is
   - $V^\pi(s) =$ expected total discounted utility starting in $s$ and following $\pi$
     - $V^\pi(s) = \sum_{s'} T(s,a,s') [R(s,a,s')+\gamma V^\pi(s')]$
   - Can be computed with simplified value iteration, $V_k^\pi(s)$
-    - Complexity $O(\|S\|^2)$
+    - Complexity $O(|S|^2)$
     - The computation can be done by a linear system solver.
 - Policy Extraction
   - Given a mapping of states to values $V^*(s)$, find the appropriate policy.
@@ -200,8 +200,9 @@ TODO: Figure out how to describe Model-Free Learning.
 
 ## Probability Review (12-13)
 
-- $P(A \vee B) = P(A)+P(B)$
-- $P(A \wedge B) = P(A)\cdot P(B)$
+- $P(A \cap B) = P(A)P(B\mid A) = P(B)P(A\mid B)$
+- If $A$ and $B$ are disjoint, then $P(A\cap B)=0$
+- $P(A \cup B) = P(A)+P(B)-P(A\cap B)$
 - A joint distribution of $n$ variables with domain sizes $d$ will have $d^n$ rows.
 - Marginal Distribution: sum rows over some variable(s) to eliminate the variables from the joint distribution.
 - $P(a\mid b) = \frac{P(a,b)}{P(b)}$
@@ -211,7 +212,7 @@ TODO: Figure out how to describe Model-Free Learning.
 - **Chain** Rule: $P(A,B) = P(A \mid B)P(B)$
   - $P(x_1,x_2,...x_n) = \prod_{i=1}^nP(x_i\mid x_1,...x_{i-1})$
   - $n!$ different ways to apply the chain rule to a joint distribution of $n$ variables because you can go through the variables in any order.
-- **Bayes'** Rule: $P(A \mid B) = \frac{P(B \mid A) \cdot P(A)}{P(B)}$
+- **Bayes'** Rule: $P(A \mid B) = \frac{P(B \mid A)P(A)}{P(B)}$
   - $P(A\mid B)\propto_A P(B\mid A)P(A)$
 - **Independence**: $X \perp Y$
   - $\Leftrightarrow \forall x,y : P(x,y) = P(x)P(y)$
@@ -303,9 +304,46 @@ If the set of conditional independences of Bayes' net A is a subset of the set o
 
 ### Inference
 
+- Posterior Probability: $P(Q\mid E_1 = e_1,...E_k=e_k)$
+- Most likely explanation: $\text{arg}\max_q P(Q=q \mid E_1=e_1,...E_k=e_k)$
+
 #### Enumeration
 
-#### Variable elimination
+```mermaid
+graph TB
+B-->A
+E-->A
+A-->J
+A-->M
+```
+
+$$P(B\mid +j, +m)\propto_B P(B,+j,+m)$$
+
+$$=\sum_{e,a}P(B,e,a,+j,+m)$$
+
+$$=\sum_{e,a}P(B)P(e)P(a\mid B,e)P(+j\mid a)P(+m\mid a)$$
+
+#### Variable Elimination
+
+Factors
+
+1. Joint distribution: $P(X,Y)$ sums to 1.
+2. Selected joint: $P(x,Y)$ sums to $P(x)$.
+3. Single conditional: $P(Y\mid x)$ sums to 1.
+4. Family of conditionals: $P(Y\mid X)$ sums to $|Y|$
+5. Specified family: $P(y\mid X)$ sums inconsistently.
+
+**Variable Elimination**:
+
+1. **Initialize**: Delete all entries in all factors that are inconsistent with evidence.
+2. Pick a hidden variable (probably the one in the least factors).
+3. **Join**: Get all factors that include the joining variable. Build joint factor by multiplying consistent entries across factors.
+4. **Marginalize**: Sum entries in the joint factor that differ only by the marginalizing variable.
+5. **Repeat** steps 2 through 3 until you have eliminated all hidden variables.
+6. Join any remaining factors.
+7. **Normalize**: Divide each entry in your joint table by the sum of all the entries.
+
+Use the above to eliminate hidden variables. Eliminate variables in the most factors.
 
 ## Machine Learning
 
