@@ -243,10 +243,10 @@ Belief after considering evidence: $B(X_{t+1}) = P(X_{t+1} \mid e_{1:t+1}) \prop
 - Weight particles based on evidence: $w(x)=P(e\mid x)$
 - Resample: Get new samples from a new distribution made by multiplying the probability of each state with a particle by that particle's weight.
 
-## Bayes' Networks
+## Bayes' Networks (16-19)
 
 - Network is a directed, acyclic graph (DAG)
-- Nodes in the graph are random variables. 
+- Nodes in the graph are random variables.
 - Edges are parent child relations.
 - Each node has a conditional distribution $P(node \mid parents(node))$ associated with it, usually represented as a conditional probability table (CPT).
 - Bayes' nets implicitly encode a full joint distribution $P(x_1,x_2,...x_n)=\prod_{i=1}^n P(x_i\mid parents(X_i))$.
@@ -256,7 +256,7 @@ Belief after considering evidence: $B(X_{t+1}) = P(X_{t+1} \mid e_{1:t+1}) \prop
 
 Consider these triples.
 
-```mermaid
+```<!-- mermaid -->
 graph LR
 X-->Y
 Y-->Z
@@ -267,7 +267,7 @@ Causal Chain
 - $X\not\perp Z$
 - $X\perp Z\mid Y$
 
-```mermaid
+```<!-- mermaid -->
 graph TB
 Y-->X
 Y-->Z
@@ -278,7 +278,7 @@ Common Cause
 - $X\not\perp Z$
 - $X\perp Z\mid Y$
 
-```mermaid
+```<!-- mermaid -->
 graph TB
 X-->Y
 Z-->Y
@@ -309,7 +309,7 @@ If the set of conditional independences of Bayes' net A is a subset of the set o
 
 #### Enumeration
 
-```mermaid
+```<!-- mermaid -->
 graph TB
 B-->A
 E-->A
@@ -325,7 +325,7 @@ $$=\sum_{e,a}P(B)P(e)P(a\mid B,e)P(+j\mid a)P(+m\mid a)$$
 
 #### Variable Elimination
 
-Factors
+Factors:
 
 1. Joint distribution: $P(X,Y)$ sums to 1.
 2. Selected joint: $P(x,Y)$ sums to $P(x)$.
@@ -333,7 +333,7 @@ Factors
 4. Family of conditionals: $P(Y\mid X)$ sums to $|Y|$
 5. Specified family: $P(y\mid X)$ sums inconsistently.
 
-**Variable Elimination**:
+How to:
 
 1. **Initialize**: Delete all entries in all factors that are inconsistent with evidence.
 2. Pick a hidden variable (probably the one in the least factors).
@@ -344,6 +344,42 @@ Factors
 7. **Normalize**: Divide each entry in your joint table by the sum of all the entries.
 
 Use the above to eliminate hidden variables. Eliminate variables in the most factors.
+
+### Sampling
+
+Can be used to approximate inference or to learn probabilities.
+
+TODO: Explain sampling from a single distribution (too trivial for now).
+
+#### Prior Sampling
+
+1. Find an ordering of variables that is consistent with the Bayes' net (i.e. parents always come before children).
+2. Set each variable $X$ in the sample by going along the ordering and sampling a $x$ from $P(X\mid \text{Parents}(X))$.
+3. Return the filled out sample.
+
+#### Rejection Sampling
+
+If you know the queries ahead of time then you might be able to speed things up.
+
+- You only have to sample as far in the ordering as the lowest variable from your queries.
+- If you get a sample that's inconsistent with evidence in all the queries, you can reject it and start over.
+
+#### Likelihood Weighting
+
+1. Give every sample has an initial weight $w=1$.
+2. Instead of rejecting samples when they contradict the evidence, just force them to match the evidence and then multiply the sample's weight by $P(e\mid \text{Parents}(E))$.
+3. When you're trying to extract the distribution from the sample set, count the samples according to their weights.
+
+#### Gibbs Sampling
+
+1. Instantiate a purely random sample as a starting place, but make it consistent with evidence.
+2. Update one non-evidence variable (selected at random) by sampling it conditioned on all the other variables.
+3. Repeat for a long time.
+4. Return the final version of the sample.
+
+For step 2:
+
+$$P(X\mid e_1,...,e_n)=\frac{P(X,e_1,...,e_n)}{P(e_1,...,e_n)}\propto_X\prod\text{CPTs with }X$$
 
 ## Machine Learning
 
@@ -356,4 +392,3 @@ $$P(Y,F_1, ... F_n) = P(Y) \prod_{i=1}^n P(F_i \mid Y)$$
 ### Mira
 
 ## Laplace Smoothing
-
