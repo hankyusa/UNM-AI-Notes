@@ -1,4 +1,6 @@
-# AI Final Exam Cheat Sheet
+# UNM CS 427 AI Notes
+
+by Luke Hanks
 
 ## Search Problems (2-5)
 
@@ -212,11 +214,11 @@ TODO: Figure out how to describe Model-Free Learning.
 - **Bayes'** Rule: $P(A \mid B) = \frac{P(B \mid A) \cdot P(A)}{P(B)}$
   - $P(A\mid B)\propto_A P(B\mid A)P(A)$
 - **Independence**: $X \perp Y$
-  - $\Rightarrow \forall x,y : P(x,y) = P(x)P(y)$
-  - $\Rightarrow \forall x,y : P(x\mid y) = P(x)$
+  - $\Leftrightarrow \forall x,y : P(x,y) = P(x)P(y)$
+  - $\Leftrightarrow \forall x,y : P(x\mid y) = P(x)$
 - **Conditional independence**: $X\perp Y\mid Z$
-  - $\Rightarrow\forall x,y,z : P(x,y|z) = P(x\mid z)P(y\mid z)$
-  - $\Rightarrow\forall x,y,z : P(x\mid z,y) = P(x\mid z)$
+  - $\Leftrightarrow\forall x,y,z : P(x,y|z) = P(x\mid z)P(y\mid z)$
+  - $\Leftrightarrow\forall x,y,z : P(x\mid z,y) = P(x\mid z)$
 
 ## Hidden Markov Models (HMM) (13-15)
 
@@ -241,6 +243,63 @@ Belief after considering evidence: $B(X_{t+1}) = P(X_{t+1} \mid e_{1:t+1}) \prop
 - Resample: Get new samples from a new distribution made by multiplying the probability of each state with a particle by that particle's weight.
 
 ## Bayes' Networks
+
+- Network is a directed, acyclic graph (DAG)
+- Nodes in the graph are random variables. 
+- Edges are parent child relations.
+- Each node has a conditional distribution $P(node \mid parents(node))$ associated with it, usually represented as a conditional probability table (CPT).
+- Bayes' nets implicitly encode a full joint distribution $P(x_1,x_2,...x_n)=\prod_{i=1}^n P(x_i\mid parents(X_i))$.
+- Number of entries in a full joint distribution is $2^N$ while a Bayes' net only has $O(N2^{k+1})$ where $N$ is the number of variables and $k$ is the max number of parents each node has in the Bayes' net.
+
+### D-Separation
+
+Consider these triples.
+
+```mermaid
+graph LR
+X-->Y
+Y-->Z
+```
+
+Causal Chain
+
+- $X\not\perp Z$
+- $X\perp Z\mid Y$
+
+```mermaid
+graph TB
+Y-->X
+Y-->Z
+```
+
+Common Cause
+
+- $X\not\perp Z$
+- $X\perp Z\mid Y$
+
+```mermaid
+graph TB
+X-->Y
+Z-->Y
+Y-->Y'
+linkStyle 2 stroke-width:2px,stroke-dasharray: 2, 5;
+```
+
+Common Effect
+
+- $X\perp Z$
+- $X\not\perp Z\mid Y$
+- $X\not\perp Z\mid Y'$
+
+In the above triples if $Y$ and $Y'$ are given or not given such that $X$ and $Z$ become independent, then the triple is considered inactive. Triples that are not inactive are active. An undirected path that contains any inactive triple is inactive (active otherwise).
+
+Query: $X_i\perp X_j \mid {X_{k_1},...,X_{k_n}}$?
+
+- Check all undirected paths between $X_i$ and $X_j$
+  - If one or more active, then independence not guaranteed.
+  - If all inactive, then independence is guaranteed.
+
+If the set of conditional independences of Bayes' net A is a subset of the set of conditional independences of Bayes' net B, then all distributions in A can be encoded in the structure of B.
 
 ### Inference
 
