@@ -322,11 +322,11 @@ A-->J
 A-->M
 ```
 
-$$P(B\mid +j, +m)\propto_B P(B,+j,+m)$$
+$P(B\mid +j, +m)\propto_B P(B,+j,+m)$
 
-$$=\sum_{e,a}P(B,e,a,+j,+m)$$
+$=\sum_{e,a}P(B,e,a,+j,+m)$
 
-$$=\sum_{e,a}P(B)P(e)P(a\mid B,e)P(+j\mid a)P(+m\mid a)$$
+$=\sum_{e,a}P(B)P(e)P(a\mid B,e)P(+j\mid a)P(+m\mid a)$
 
 #### Variable Elimination
 
@@ -384,16 +384,54 @@ If you know the queries ahead of time then you might be able to speed things up.
 
 For step 2:
 
-$$P(X\mid e_1,...,e_n)=\frac{P(X,e_1,...,e_n)}{P(e_1,...,e_n)}\propto_X\prod\text{CPTs with }X$$
+$P(X\mid e_1,...,e_n)=\frac{P(X,e_1,...,e_n)}{P(e_1,...,e_n)}\propto_X\prod\text{CPTs with }X$
 
 ## Machine Learning
 
 ### Naive Bayes
 
-$$P(Y,F_1, ... F_n) = P(Y) \prod_{i=1}^n P(F_i \mid Y)$$
+```mermaid
+graph TB
+Y-->F1
+Y-->F2
+Y-->F[...]
+Y-->Fn
+```
+
+$\boxed {F_1}\leftarrow \boxed Y \rightarrow \boxed {F_n}$
+
+$P(Y\mid F_1, ... F_n)\propto_Y P(Y,F_1, ... F_n) = P(Y) \prod_{i=1}^n P(F_i \mid Y)$
+
+### Parameter Estimation
+
+#### Maximum Likelihood
+
+$P_{ML}(x)=\frac{\text{count}(x)}{\text{total samples}}$
+
+#### Laplace Smoothing
+
+Pretend you saw every outcome $k$ more than you actually did.
+
+$P_{LAP,k}(x)=\frac{c(x)+k}{\sum_x[c(x)+k]}=\frac{c(x)+k}{N+k|X| }$
+
+$P_{LAP,k}(x\mid y)=\frac{c(x,y)+k}{c(y)+k|X| }$
 
 ### Perceptron
 
+$y=\text{arg}\max_y w_y\cdot f(x)$
+
+If wrong, subtract $f(x)$ from weight of wrong label and add $f(x)$ to weight of right label.
+
 ### Mira
 
-## Laplace Smoothing
+Before making adjustments to weight vectors, multiply $f(x)$ by $\tau$ to get near minimal adjustment that still fixes the issue.
+
+$\tau=\frac{(w'_y-w'_{y*})\cdot f + 1}{2f\cdot f}$
+
+### Crazy gradient decent tricks
+
+- Function to computation graph.
+- Top numbers are evaluations of the function along.
+- If node is a function of x, plug top left number into derivative of node function and multiply by the bottom right number.
+- If node is just a + sign then push the bottom numbers through.
+- If the node is a * sign then multiply the bottom right number by both of the top left numbers and then swap their positions.
